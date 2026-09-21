@@ -1,23 +1,841 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Robinson Media Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Robinson Media Studio creates digital ads, posters, GIFs, websites, AI workflows, content automation, and Google Ads campaigns for businesses and creators.">
+  <title>Robinson Media Studio | Creative, Automation & Digital Growth</title>
+
+  <style>
+    :root {
+      --bg: #070b14;
+      --bg-soft: #0d1422;
+      --card: rgba(255,255,255,.055);
+      --card-border: rgba(255,255,255,.10);
+      --text: #f5f7fb;
+      --muted: #a9b3c5;
+      --accent: #7c5cff;
+      --accent-2: #27d4ff;
+      --accent-3: #50e3a4;
+      --max-width: 1180px;
+      --radius: 22px;
+      --shadow: 0 25px 80px rgba(0,0,0,.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(124,92,255,.16), transparent 30%),
+        radial-gradient(circle at 85% 15%, rgba(39,212,255,.12), transparent 28%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin-inline: auto;
+    }
+
+    /* Navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      background: rgba(7,11,20,.72);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .nav-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: -.03em;
+      font-size: 1.15rem;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      background: linear-gradient(90deg, var(--accent-2), #a88cff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 13px 20px;
+      font-weight: 700;
+      font-size: .94rem;
+      transition: .25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .button-primary {
+      color: #071019;
+      background: linear-gradient(90deg, var(--accent-2), #9d7dff);
+      box-shadow: 0 10px 30px rgba(39,212,255,.16);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    .button-secondary {
+      border-color: rgba(255,255,255,.15);
+      background: rgba(255,255,255,.04);
+      color: white;
+    }
+
+    .button-secondary:hover {
+      background: rgba(255,255,255,.08);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      align-items: center;
+      padding: 84px 0 72px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(124,92,255,.35);
+      background: rgba(124,92,255,.10);
+      color: #d8d0ff;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-3);
+      box-shadow: 0 0 18px var(--accent-3);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7.2vw, 6.6rem);
+      line-height: .94;
+      letter-spacing: -.065em;
+      max-width: 850px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(100deg, var(--accent-2), #9b7cff 60%, #e893ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy {
+      color: var(--muted);
+      font-size: clamp(1rem, 1.7vw, 1.2rem);
+      max-width: 700px;
+      margin-top: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 42px;
+      color: #ccd4e2;
+      font-size: .87rem;
+    }
+
+    .hero-proof span::before {
+      content: "✓";
+      color: var(--accent-3);
+      margin-right: 7px;
+      font-weight: 900;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 500px;
+    }
+
+    .orb {
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      right: 0;
+      top: 65px;
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255,255,255,.35), transparent 16%),
+        linear-gradient(135deg, rgba(39,212,255,.85), rgba(124,92,255,.78) 58%, rgba(232,147,255,.75));
+      filter: blur(.2px);
+      box-shadow: 0 30px 100px rgba(96,81,255,.32);
+    }
+
+    .floating-card {
+      position: absolute;
+      padding: 18px 20px;
+      background: rgba(15,22,37,.82);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      min-width: 210px;
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: .96rem;
+      margin-bottom: 3px;
+    }
+
+    .floating-card small {
+      color: var(--muted);
+    }
+
+    .card-one { top: 38px; left: 10px; }
+    .card-two { bottom: 85px; left: -10px; }
+    .card-three { right: -8px; bottom: 25px; }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 12px;
+      font-size: 1.15rem;
+      background: linear-gradient(135deg, rgba(39,212,255,.18), rgba(124,92,255,.18));
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    /* General Sections */
+    section {
+      padding: 105px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 48px;
+    }
+
+    .kicker {
+      color: var(--accent-2);
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      font-size: .76rem;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1.02;
+      letter-spacing: -.045em;
+      margin-bottom: 18px;
+    }
+
+    .section-heading p,
+    .section-copy {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 28px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      min-height: 250px;
+      transition: .3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(124,92,255,.14);
+      filter: blur(30px);
+      right: -70px;
+      bottom: -90px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(39,212,255,.28);
+      background: rgba(255,255,255,.075);
+    }
+
+    .service-card h3 {
+      font-size: 1.28rem;
+      margin: 14px 0 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    /* Process / split sections */
+    .split {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .process-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .process-item {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 20px;
+      border-radius: 17px;
+      border: 1px solid var(--card-border);
+      background: rgba(255,255,255,.035);
+    }
+
+    .step {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(124,92,255,.16);
+      color: #d8d0ff;
+      font-weight: 900;
+    }
+
+    .process-item h3 {
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .process-item p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* Automation feature */
+    .automation-panel {
+      border-radius: 30px;
+      background:
+        linear-gradient(125deg, rgba(124,92,255,.15), transparent 40%),
+        rgba(255,255,255,.035);
+      border: 1px solid var(--card-border);
+      padding: 40px;
+      overflow: hidden;
+    }
+
+    .workflow {
+      margin-top: 34px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+
+    .workflow-node {
+      min-width: 130px;
+      text-align: center;
+      padding: 16px 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 15px;
+      background: rgba(7,11,20,.7);
+      font-size: .84rem;
+    }
+
+    .workflow-arrow {
+      color: var(--accent-2);
+      font-size: 1.35rem;
+    }
+
+    /* CTA */
+    .cta {
+      padding-top: 40px;
+    }
+
+    .cta-box {
+      padding: 60px;
+      border-radius: 32px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(39,212,255,.20), transparent 25%),
+        linear-gradient(135deg, rgba(124,92,255,.25), rgba(255,255,255,.045));
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: #c6cede;
+    }
+
+    /* Footer */
+    footer {
+      padding: 44px 0;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,.08);
+      margin-top: 90px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 390px;
+        max-width: 520px;
+      }
+
+      .orb {
+        width: 280px;
+        height: 280px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      section {
+        padding: 78px 0;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 16vw, 4.7rem);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box,
+      .automation-panel {
+        padding: 28px 22px;
+      }
+
+      .hero-visual {
+        min-height: 350px;
+      }
+
+      .orb {
+        right: -50px;
+      }
+
+      .card-three {
+        right: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Robinson Media Studio</h1>
 
-  <p>
-    Robinson Media Studio is a content publishing workflow used to prepare and publish podcast promotional videos.
-  </p>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">Robinson <span>Media Studio</span></a>
 
-  <p>
-    The workflow helps convert podcast audio, show artwork, episode titles, captions, and hashtags into short-form video content for publishing by the authorized account owner.
-  </p>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#automation">Automation</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  <ul>
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="terms.html">Terms of Service</a></li>
-  </ul>
+      <a class="button button-primary nav-cta" href="#contact">Start a Project</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">Creative + Automation + Growth</div>
+
+          <h1>
+            We create.
+            <span class="gradient-text">We automate.</span>
+            You grow.
+          </h1>
+
+          <p class="hero-copy">
+            Robinson Media Studio helps businesses, creators, and organizations build a stronger digital presence through creative content, websites, AI-powered workflows, marketing automation, and Google Ads campaigns.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#services">Explore Services →</a>
+            <a class="button button-secondary" href="#contact">Work With Us</a>
+          </div>
+
+          <div class="hero-proof">
+            <span>Creative production</span>
+            <span>Workflow automation</span>
+            <span>Digital advertising</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orb"></div>
+
+          <div class="floating-card card-one">
+            <div class="icon">✦</div>
+            <strong>AI Workflows</strong>
+            <small>Automate repetitive work</small>
+          </div>
+
+          <div class="floating-card card-two">
+            <div class="icon">▶</div>
+            <strong>Creative Content</strong>
+            <small>Ads • Posters • GIFs</small>
+          </div>
+
+          <div class="floating-card card-three">
+            <div class="icon">↗</div>
+            <strong>Digital Growth</strong>
+            <small>Websites • Google Ads</small>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">What we do</div>
+          <h2>Creative services built for the digital world.</h2>
+          <p>
+            From one-time creative projects to automated content systems, we combine design, technology, and marketing to help your brand move faster.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="icon">▣</div>
+            <h3>Digital Ads</h3>
+            <p>
+              Scroll-stopping creative for social media, promotions, product launches, campaigns, and digital advertising.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">◫</div>
+            <h3>Posters & Graphics</h3>
+            <p>
+              Professional promotional graphics for events, businesses, social platforms, announcements, and campaigns.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">▶</div>
+            <h3>GIFs & Motion Content</h3>
+            <p>
+              Lightweight animated visuals designed to add movement and energy to your marketing and social content.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">⚙</div>
+            <h3>Content Automation</h3>
+            <p>
+              Automated workflows that prepare, organize, transform, and distribute content across your digital platforms.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">✦</div>
+            <h3>AI Workflows</h3>
+            <p>
+              Custom AI-assisted systems for content creation, internal processes, data workflows, customer experiences, and repetitive tasks.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">⌘</div>
+            <h3>Website Design</h3>
+            <p>
+              Modern, responsive websites and landing pages designed around your brand, audience, and business goals.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">G</div>
+            <h3>Google Ads Campaigns</h3>
+            <p>
+              Campaign setup and management designed to help your business reach customers actively searching for your products or services.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">↗</div>
+            <h3>Digital Strategy</h3>
+            <p>
+              Bring your website, content, advertising, and automation together into a connected digital system.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">∞</div>
+            <h3>Custom Projects</h3>
+            <p>
+              Have a digital idea that does not fit neatly into a box? We can help plan, prototype, build, and automate it.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="automation">
+      <div class="container">
+        <div class="automation-panel">
+
+          <div class="kicker">Automation</div>
+          <h2>Turn repetitive tasks into workflows.</h2>
+
+          <p class="section-copy">
+            Robinson Media Studio builds automation systems that connect content, files, APIs, AI tools, and publishing platforms. Our content publishing workflow can prepare podcast promotional media by combining audio, artwork, episode information, captions, and hashtags into short-form content for publishing by the authorized account owner.
+          </p>
+
+          <div class="workflow" aria-label="Example automated content workflow">
+            <div class="workflow-node">Audio + Assets</div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-node">AI Processing</div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-node">Create Content</div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-node">Review</div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-node">Publish</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="process">
+      <div class="container split">
+
+        <div class="section-heading">
+          <div class="kicker">How we work</div>
+          <h2>From idea to launch.</h2>
+          <p>
+            We focus on building practical digital solutions—not adding technology just for the sake of it.
+          </p>
+        </div>
+
+        <div class="process-list">
+
+          <div class="process-item">
+            <div class="step">01</div>
+            <div>
+              <h3>Understand the goal</h3>
+              <p>We identify what you're trying to accomplish, who you're trying to reach, and what is slowing you down.</p>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <div class="step">02</div>
+            <div>
+              <h3>Design the solution</h3>
+              <p>We determine the right mix of creative, web, advertising, automation, or AI services for the project.</p>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <div class="step">03</div>
+            <div>
+              <h3>Build & test</h3>
+              <p>We create the assets or systems, test the experience, and refine the details before launch.</p>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <div class="step">04</div>
+            <div>
+              <h3>Launch & improve</h3>
+              <p>Once live, the solution can be measured, maintained, optimized, and expanded as your needs grow.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <div class="kicker">Let's build something</div>
+          <h2>Have an idea? Let's bring it to life.</h2>
+          <p>
+            Whether you need an ad, a website, a smarter workflow, or an entire digital system, Robinson Media Studio can help turn the idea into something real.
+          </p>
+
+          <!-- Replace this email with your preferred business email -->
+          <a class="button button-primary" href="mailto:contact@robinsonmediastudio.com">
+            Start a Project →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div class="container footer-grid">
+
+      <div>
+        <strong style="color:white;">Robinson Media Studio</strong><br>
+        <small>Creative. Automation. Digital Growth.</small>
+      </div>
+
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#automation">Automation</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+
+      <small>© <span id="year"></span> Robinson Media Studio</small>
+
+    </div>
+  </footer>
+
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
