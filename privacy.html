@@ -1,65 +1,295 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Privacy Policy - Robinson Media Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for Robinson Media Studio.">
+  <title>Privacy Policy | Robinson Media Studio</title>
+  
+<style>
+  :root {
+    --bg: #070b14;
+    --bg-soft: #0d1422;
+    --card: rgba(255,255,255,.055);
+    --border: rgba(255,255,255,.10);
+    --text: #f5f7fb;
+    --muted: #a9b3c5;
+    --accent: #27d4ff;
+    --accent2: #9d7dff;
+    --max: 920px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background:
+      radial-gradient(circle at 10% 0%, rgba(124,92,255,.15), transparent 28%),
+      radial-gradient(circle at 90% 5%, rgba(39,212,255,.10), transparent 26%),
+      var(--bg);
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(16px);
+    background: rgba(7,11,20,.82);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+
+  .topbar-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .brand {
+    color: white;
+    font-weight: 800;
+    letter-spacing: -.03em;
+  }
+
+  .brand span {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .back {
+    color: var(--muted);
+    font-size: .92rem;
+  }
+
+  main {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 80px 22px 100px;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .12em;
+    font-size: .76rem;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: clamp(2.7rem, 7vw, 5rem);
+    letter-spacing: -.055em;
+    line-height: 1;
+    margin: 0 0 18px;
+  }
+
+  .intro {
+    color: var(--muted);
+    font-size: 1.08rem;
+    max-width: 760px;
+  }
+
+  .effective {
+    display: inline-block;
+    margin: 22px 0 42px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(39,212,255,.08);
+    border: 1px solid rgba(39,212,255,.18);
+    color: #c6f7ff;
+    font-size: .86rem;
+  }
+
+  .policy-section {
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .policy-section h2 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+    letter-spacing: -.02em;
+  }
+
+  .policy-section p, .policy-section li {
+    color: var(--muted);
+  }
+
+  ul { padding-left: 22px; }
+
+  .notice {
+    margin-top: 34px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: .92rem;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    text-align: center;
+    padding: 28px 22px 44px;
+    font-size: .88rem;
+  }
+</style>
+
 </head>
 <body>
-  <h1>Privacy Policy</h1>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand">Robinson <span>Media Studio</span></a>
+      <a href="index.html" class="back">← Back to Home</a>
+    </div>
+  </header>
 
-  <p><strong>Effective Date:</strong> May 16, 2026</p>
+  <main>
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
 
-  <p>
-    Robinson Media Studio is a content publishing workflow used to prepare and publish podcast promotional videos.
-    This Privacy Policy explains how information is handled when users authorize the app and use the workflow.
-  </p>
+    <p class="intro">
+      This Privacy Policy explains how Robinson Media Studio collects, uses, processes, and protects information when you visit our website, contact us, use our services, or authorize a connected platform or workflow.
+    </p>
 
-  <h2>Information We Collect</h2>
+    <div class="effective"><strong>Effective Date:</strong> September 21, 2026</div>
 
-  <p>
-    The app may collect or process the following information:
-  </p>
+    <section class="policy-section">
+      <h2>1. Information We May Collect</h2>
+      <p>Depending on how you interact with Robinson Media Studio, we may collect or process information such as:</p>
+      <ul>
+        <li>Name, email address, business name, and contact information you provide.</li>
+        <li>Project details, requests, messages, files, images, logos, audio, video, documents, and other materials you submit.</li>
+        <li>Website usage information such as browser type, device type, referring pages, approximate location, and interaction data when analytics tools are enabled.</li>
+        <li>Advertising and campaign information associated with services such as Google Ads or other authorized marketing platforms.</li>
+        <li>OAuth authorization information, platform user identifiers, access tokens, and refresh tokens when you connect an account to an approved workflow.</li>
+        <li>Podcast audio, generated media, episode titles, descriptions, captions, hashtags, publishing status, and workflow logs when using content automation services.</li>
+        <li>Technical information required to operate, troubleshoot, secure, or improve websites, automations, integrations, and AI workflows.</li>
+      </ul>
+    </section>
 
-  <ul>
-    <li>TikTok OAuth authorization data</li>
-    <li>TikTok access tokens and refresh tokens</li>
-    <li>TikTok user identifiers such as open_id</li>
-    <li>Podcast audio files</li>
-    <li>Generated video files</li>
-    <li>Episode titles, descriptions, captions, and hashtags</li>
-    <li>Publishing status, post results, and related workflow logs</li>
-  </ul>
+    <section class="policy-section">
+      <h2>2. How We Use Information</h2>
+      <p>We may use information to:</p>
+      <ul>
+        <li>Respond to inquiries and communicate about projects or services.</li>
+        <li>Create ads, posters, graphics, GIFs, websites, digital content, and other requested deliverables.</li>
+        <li>Build, operate, test, and maintain automation and AI workflows.</li>
+        <li>Manage authorized advertising campaigns and related reporting.</li>
+        <li>Prepare, transform, upload, or publish content to accounts you own or are authorized to manage.</li>
+        <li>Authenticate connected services and maintain approved integrations.</li>
+        <li>Monitor reliability, prevent misuse, troubleshoot technical issues, and improve our services.</li>
+        <li>Comply with applicable legal obligations.</li>
+      </ul>
+    </section>
 
-  <h2>How We Use Information</h2>
+    <section class="policy-section">
+      <h2>3. Connected Accounts and Authorization</h2>
+      <p>
+        Some Robinson Media Studio workflows may connect to third-party platforms through OAuth or similar authorization systems. We only use connected-account permissions for the functions you authorize, such as retrieving account information, preparing content, uploading content, publishing content, or managing approved campaign data.
+      </p>
+      <p>
+        Robinson Media Studio does not intentionally publish content to a connected social account without authorization from the account owner or an approved user of the workflow.
+      </p>
+    </section>
 
-  <p>
-    Information is used only to operate the podcast publishing workflow, generate promotional video content,
-    and upload or publish content to accounts authorized by the user.
-  </p>
+    <section class="policy-section">
+      <h2>4. Third-Party Services</h2>
+      <p>
+        Our services may rely on third-party platforms and providers, including social-media platforms, Google services, workflow automation providers, AI services, website hosting providers, cloud-storage providers, podcast-hosting services, analytics tools, and media-processing or rendering services.
+      </p>
+      <p>
+        Information processed by those providers is also subject to their own privacy policies, terms, and security practices. Robinson Media Studio does not control the independent privacy practices of third-party services.
+      </p>
+    </section>
 
-  <p>
-    The app does not sell user data. The app does not post content to TikTok without authorization from the account owner or approved workflow user.
-  </p>
+    <section class="policy-section">
+      <h2>5. AI and Automated Processing</h2>
+      <p>
+        Certain services may use artificial intelligence or automated tools to assist with tasks such as generating copy, summarizing information, processing media, organizing content, producing creative concepts, or supporting business workflows.
+      </p>
+      <p>
+        Client information will only be submitted to third-party AI or automation providers when reasonably necessary to provide the requested service or operate an authorized workflow.
+      </p>
+    </section>
 
-  <h2>Third-Party Services</h2>
+    <section class="policy-section">
+      <h2>6. Data Sharing</h2>
+      <p>
+        Robinson Media Studio does not sell personal information. We may share information with service providers only when reasonably necessary to perform requested services, operate authorized integrations, maintain our systems, process content, provide hosting, or comply with legal requirements.
+      </p>
+    </section>
 
-  <p>
-    The workflow may use third-party services such as TikTok, Make.com, file storage providers, podcast hosting platforms,
-    and video rendering tools to process and publish content.
-  </p>
+    <section class="policy-section">
+      <h2>7. Data Retention</h2>
+      <p>
+        We retain information only for as long as reasonably necessary to provide services, maintain business records, operate active workflows, resolve disputes, enforce agreements, or satisfy legal obligations. Retention periods may vary depending on the type of information and the service involved.
+      </p>
+    </section>
 
-  <h2>User Control</h2>
+    <section class="policy-section">
+      <h2>8. Security</h2>
+      <p>
+        We use reasonable administrative and technical safeguards designed to protect information under our control. However, no website, cloud service, internet transmission, API, or third-party platform can be guaranteed to be completely secure.
+      </p>
+    </section>
 
-  <p>
-    Users may revoke TikTok access at any time through their TikTok account settings or by contacting us.
-  </p>
+    <section class="policy-section">
+      <h2>9. Your Choices and Controls</h2>
+      <p>You may:</p>
+      <ul>
+        <li>Ask questions about information we hold or process in connection with your project.</li>
+        <li>Request correction or deletion of information where applicable.</li>
+        <li>Revoke access to connected third-party accounts through the applicable platform settings.</li>
+        <li>Ask us to stop using a connected account or discontinue an automation workflow.</li>
+      </ul>
+    </section>
 
-  <h2>Contact</h2>
+    <section class="policy-section">
+      <h2>10. Children's Privacy</h2>
+      <p>
+        Robinson Media Studio's business services are not directed to children under 13, and we do not knowingly collect personal information from children under 13 through our website.
+      </p>
+    </section>
 
-  <p>
-    For questions about this Privacy Policy, contact: khalilr432@gmail.com
-  </p>
+    <section class="policy-section">
+      <h2>11. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy as our services, technologies, integrations, or legal obligations change. The effective date at the top of this page will be updated when material revisions are made.
+      </p>
+    </section>
 
-  <p><a href="index.html">Back to Home</a></p>
+    <section class="policy-section">
+      <h2>12. Contact</h2>
+      <p>
+        Questions about this Privacy Policy or privacy-related requests may be sent to:
+        <a href="mailto:khalilr432@gmail.com">khalilr432@gmail.com</a>
+      </p>
+    </section>
+
+    <div class="notice">
+      This policy is intended to describe Robinson Media Studio's current data practices. Specific client agreements, platform requirements, or applicable law may impose additional terms.
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Robinson Media Studio ·
+    <a href="terms.html">Terms of Service</a>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
