@@ -1,60 +1,335 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Terms of Service - Robinson Media Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms of Service for Robinson Media Studio.">
+  <title>Terms of Service | Robinson Media Studio</title>
+  
+<style>
+  :root {
+    --bg: #070b14;
+    --bg-soft: #0d1422;
+    --card: rgba(255,255,255,.055);
+    --border: rgba(255,255,255,.10);
+    --text: #f5f7fb;
+    --muted: #a9b3c5;
+    --accent: #27d4ff;
+    --accent2: #9d7dff;
+    --max: 920px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background:
+      radial-gradient(circle at 10% 0%, rgba(124,92,255,.15), transparent 28%),
+      radial-gradient(circle at 90% 5%, rgba(39,212,255,.10), transparent 26%),
+      var(--bg);
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(16px);
+    background: rgba(7,11,20,.82);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+
+  .topbar-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .brand {
+    color: white;
+    font-weight: 800;
+    letter-spacing: -.03em;
+  }
+
+  .brand span {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .back {
+    color: var(--muted);
+    font-size: .92rem;
+  }
+
+  main {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 80px 22px 100px;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .12em;
+    font-size: .76rem;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: clamp(2.7rem, 7vw, 5rem);
+    letter-spacing: -.055em;
+    line-height: 1;
+    margin: 0 0 18px;
+  }
+
+  .intro {
+    color: var(--muted);
+    font-size: 1.08rem;
+    max-width: 760px;
+  }
+
+  .effective {
+    display: inline-block;
+    margin: 22px 0 42px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(39,212,255,.08);
+    border: 1px solid rgba(39,212,255,.18);
+    color: #c6f7ff;
+    font-size: .86rem;
+  }
+
+  .policy-section {
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .policy-section h2 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+    letter-spacing: -.02em;
+  }
+
+  .policy-section p, .policy-section li {
+    color: var(--muted);
+  }
+
+  ul { padding-left: 22px; }
+
+  .notice {
+    margin-top: 34px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: .92rem;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    text-align: center;
+    padding: 28px 22px 44px;
+    font-size: .88rem;
+  }
+</style>
+
 </head>
 <body>
-  <h1>Terms of Service</h1>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand">Robinson <span>Media Studio</span></a>
+      <a href="index.html" class="back">← Back to Home</a>
+    </div>
+  </header>
 
-  <p><strong>Effective Date:</strong> May 16, 2026</p>
+  <main>
+    <div class="eyebrow">Legal</div>
+    <h1>Terms of Service</h1>
 
-  <p>
-    These Terms of Service apply to Robinson Media Studio, a content publishing workflow used to prepare and publish
-    podcast promotional videos.
-  </p>
+    <p class="intro">
+      These Terms of Service govern your use of the Robinson Media Studio website and any creative, marketing, website, automation, AI, advertising, or content-publishing services provided by Robinson Media Studio.
+    </p>
 
-  <h2>Use of the App</h2>
+    <div class="effective"><strong>Effective Date:</strong> September 21, 2026</div>
 
-  <p>
-    Robinson Media Studio is intended to help authorized users create and publish short-form podcast promotional content.
-    Users may use the app only with accounts they own or are authorized to manage.
-  </p>
+    <section class="policy-section">
+      <h2>1. Services</h2>
+      <p>
+        Robinson Media Studio may provide services including digital ads, posters, graphics, GIFs, websites, landing pages, content automation, AI workflows, digital strategy, Google Ads campaign services, social-media content workflows, podcast promotional content, and custom digital projects.
+      </p>
+      <p>
+        The exact scope, deliverables, timeline, pricing, revisions, and responsibilities for a client project may be defined separately in a proposal, invoice, statement of work, email, or other written agreement.
+      </p>
+    </section>
 
-  <h2>User Responsibilities</h2>
+    <section class="policy-section">
+      <h2>2. Authorized Use</h2>
+      <p>
+        You may use Robinson Media Studio services only for lawful purposes and only with accounts, data, content, advertising accounts, websites, social-media accounts, and other resources that you own or are authorized to manage.
+      </p>
+    </section>
 
-  <p>
-    Users are responsible for all content they upload, generate, or publish through the workflow.
-    Users must own or have permission to use all podcast audio, logos, images, music, captions, and other materials used in the content.
-  </p>
+    <section class="policy-section">
+      <h2>3. Client Responsibilities</h2>
+      <p>You are responsible for:</p>
+      <ul>
+        <li>Providing accurate information and timely project feedback.</li>
+        <li>Obtaining all permissions, licenses, releases, and rights necessary for materials you provide.</li>
+        <li>Ensuring that your products, services, claims, advertisements, and published content comply with applicable law and platform rules.</li>
+        <li>Reviewing and approving final creative, website, advertising, or automated outputs before public use when approval is part of the workflow.</li>
+        <li>Maintaining appropriate access controls and security for accounts you authorize Robinson Media Studio to use.</li>
+      </ul>
+    </section>
 
-  <h2>Posting and Platform Rules</h2>
+    <section class="policy-section">
+      <h2>4. Content and Intellectual Property</h2>
+      <p>
+        You retain ownership of materials you provide to Robinson Media Studio. You represent that you have the right to use and provide those materials.
+      </p>
+      <p>
+        Ownership and usage rights for final deliverables may depend on the project agreement and payment status. Unless otherwise agreed in writing, third-party software, fonts, stock assets, templates, plugins, APIs, AI services, platform components, or licensed materials remain subject to their respective licenses and terms.
+      </p>
+    </section>
 
-  <p>
-    Users are responsible for ensuring that their content complies with TikTok's terms, community guidelines,
-    copyright rules, and all applicable laws.
-  </p>
+    <section class="policy-section">
+      <h2>5. AI-Generated and Automated Content</h2>
+      <p>
+        Some services may use AI or automated systems to generate, transform, summarize, analyze, or organize content. AI-assisted outputs may contain errors, omissions, similarities to other content, or information that requires human review.
+      </p>
+      <p>
+        Clients are responsible for reviewing important AI-generated outputs before relying on or publishing them, particularly where accuracy, legal compliance, factual claims, or brand reputation are material.
+      </p>
+    </section>
 
-  <h2>No Guarantee</h2>
+    <section class="policy-section">
+      <h2>6. Advertising Services</h2>
+      <p>
+        For Google Ads or other advertising services, Robinson Media Studio may assist with campaign setup, creative, targeting configuration, optimization, reporting, or account management as agreed.
+      </p>
+      <p>
+        Advertising spend paid to Google or another advertising platform is separate from Robinson Media Studio's service fees unless expressly stated otherwise.
+      </p>
+      <p>
+        We do not guarantee impressions, clicks, leads, conversions, sales, revenue, ranking, return on ad spend, or any other advertising result.
+      </p>
+    </section>
 
-  <p>
-    Robinson Media Studio does not guarantee that content will be approved, published, viewed, monetized, or receive engagement.
-    Third-party platforms may reject, limit, remove, or restrict content according to their own policies.
-  </p>
+    <section class="policy-section">
+      <h2>7. Websites and Digital Projects</h2>
+      <p>
+        Website projects may depend on third-party hosting, domains, APIs, plugins, libraries, content-management systems, analytics services, payment providers, or other external systems.
+      </p>
+      <p>
+        Unless ongoing maintenance is included in a separate agreement, the client is responsible for maintaining domains, hosting, subscriptions, credentials, backups, licenses, and third-party services after project completion.
+      </p>
+    </section>
 
-  <h2>Third-Party Services</h2>
+    <section class="policy-section">
+      <h2>8. Connected Platforms and Publishing</h2>
+      <p>
+        Some workflows may connect with third-party platforms such as TikTok, YouTube, podcast hosts, cloud-storage providers, automation platforms, or other services.
+      </p>
+      <p>
+        Users must comply with the rules, terms, copyright requirements, community guidelines, advertising policies, and technical restrictions of each connected platform.
+      </p>
+      <p>
+        Robinson Media Studio does not guarantee that a third-party platform will approve, publish, distribute, monetize, maintain, or continue supporting any content, account, API, integration, or feature.
+      </p>
+    </section>
 
-  <p>
-    The workflow may rely on third-party services such as TikTok, Make.com, podcast hosting platforms,
-    file storage providers, and video rendering tools. Use of those services may be subject to their own terms.
-  </p>
+    <section class="policy-section">
+      <h2>9. Third-Party Services</h2>
+      <p>
+        Robinson Media Studio is not responsible for outages, suspensions, policy changes, API changes, pricing changes, account restrictions, data loss, or service interruptions caused by independent third-party providers.
+      </p>
+    </section>
 
-  <h2>Contact</h2>
+    <section class="policy-section">
+      <h2>10. Fees, Payments, and Project Changes</h2>
+      <p>
+        Fees, deposits, payment schedules, revision limits, cancellation terms, and additional-work charges may be specified in the applicable proposal, invoice, statement of work, or other project agreement.
+      </p>
+      <p>
+        Work requested outside the agreed project scope may require additional fees or a revised timeline.
+      </p>
+    </section>
 
-  <p>
-    For questions about these Terms, contact: khalilr432@gmail.com
-  </p>
+    <section class="policy-section">
+      <h2>11. No Guarantee of Results</h2>
+      <p>
+        Creative, marketing, automation, website, AI, and advertising services can support business objectives, but outcomes depend on many factors outside Robinson Media Studio's control.
+      </p>
+      <p>
+        We do not guarantee specific business results, revenue, audience growth, engagement, search rankings, platform approval, campaign performance, publication success, or uninterrupted operation.
+      </p>
+    </section>
 
-  <p><a href="index.html">Back to Home</a></p>
+    <section class="policy-section">
+      <h2>12. Prohibited Uses</h2>
+      <p>You may not use our services to:</p>
+      <ul>
+        <li>Violate applicable law or the rights of another person or organization.</li>
+        <li>Publish content you do not have permission to use.</li>
+        <li>Gain unauthorized access to accounts, systems, or data.</li>
+        <li>Distribute malware, deceptive content, spam, or intentionally harmful material.</li>
+        <li>Use connected services in violation of their platform terms or developer policies.</li>
+      </ul>
+    </section>
+
+    <section class="policy-section">
+      <h2>13. Limitation of Liability</h2>
+      <p>
+        To the maximum extent permitted by applicable law, Robinson Media Studio will not be liable for indirect, incidental, special, consequential, or punitive damages, lost profits, lost revenue, lost data, loss of goodwill, or business interruption arising from the use of our website, services, deliverables, workflows, or third-party platforms.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>14. Suspension or Termination</h2>
+      <p>
+        We may suspend or discontinue access to a service or workflow when reasonably necessary because of nonpayment, security concerns, misuse, legal requirements, platform restrictions, or a violation of these Terms.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>15. Changes to These Terms</h2>
+      <p>
+        We may update these Terms as our services, technologies, integrations, or legal obligations change. The effective date shown above will reflect the latest revision.
+      </p>
+    </section>
+
+    <section class="policy-section">
+      <h2>16. Contact</h2>
+      <p>
+        Questions regarding these Terms may be sent to:
+        <a href="mailto:khalilr432@gmail.com">khalilr432@gmail.com</a>
+      </p>
+    </section>
+
+    <div class="notice">
+      These Terms provide general website and service terms for Robinson Media Studio. Individual client projects may also be governed by a separate proposal, contract, invoice, or statement of work.
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Robinson Media Studio ·
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
