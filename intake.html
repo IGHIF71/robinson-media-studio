@@ -94,21 +94,6 @@
           </div>
 
           <div class="field">
-            <label for="phone">Phone number</label>
-            <input id="phone" name="Phone" type="tel" autocomplete="tel">
-          </div>
-
-          <div class="field">
-            <label for="business">Business / organization *</label>
-            <input id="business" name="Business or Organization" type="text" required>
-          </div>
-
-          <div class="field">
-            <label for="website">Current website</label>
-            <input id="website" name="Current Website" type="url" placeholder="https://">
-          </div>
-
-          <div class="field">
             <label for="orgtype">Organization type *</label>
             <select id="orgtype" name="Organization Type" required>
               <option value="">Select one</option>
@@ -121,14 +106,10 @@
             </select>
           </div>
 
-          <div class="field full nonprofit-note">
-            Verified 501(c)(3) organizations may qualify for up to 15% off recurring service packages through our Nonprofit Partner Program.
-          </div>
-
           <div class="field">
-            <label for="plan">Plan you’re interested in</label>
-            <select id="plan" name="Preferred Plan">
-              <option value="">Not sure yet</option>
+            <label for="plan">Plan you’re interested in *</label>
+            <select id="plan" name="Preferred Plan" required>
+              <option value="">Select a plan</option>
               <option value="Essentials">Essentials — $1,500/month</option>
               <option value="Growth">Growth — $2,500/month</option>
               <option value="Automation+">Automation+ — $3,500+/month</option>
@@ -137,7 +118,7 @@
             </select>
           </div>
 
-          <div class="field">
+          <div class="field full">
             <label for="budget">Estimated budget *</label>
             <select id="budget" name="Estimated Budget" required>
               <option value="">Select a range</option>
@@ -151,66 +132,12 @@
           </div>
 
           <div class="field full">
-            <fieldset>
-              <legend>Services you’re interested in</legend>
-              <div class="checks">
-                <label class="check"><input type="checkbox" name="Services" value="Website design / development"> Website design / development</label>
-                <label class="check"><input type="checkbox" name="Services" value="Website maintenance"> Website maintenance</label>
-                <label class="check"><input type="checkbox" name="Services" value="SEO / AI Search Optimization"> SEO / AI Search Optimization</label>
-                <label class="check"><input type="checkbox" name="Services" value="Google Ads"> Google Ads</label>
-                <label class="check"><input type="checkbox" name="Services" value="Graphics / digital ads"> Graphics / digital ads</label>
-                <label class="check"><input type="checkbox" name="Services" value="Content creation"> Content creation</label>
-                <label class="check"><input type="checkbox" name="Services" value="Make.com automation"> Make.com automation</label>
-                <label class="check"><input type="checkbox" name="Services" value="Custom AI agents"> Custom AI agents</label>
-                <label class="check"><input type="checkbox" name="Services" value="Sanity.io CMS"> Sanity.io CMS integration</label>
-                <label class="check"><input type="checkbox" name="Services" value="CRM / API integrations"> CRM / API integrations</label>
-                <label class="check"><input type="checkbox" name="Services" value="Content deployment workflow"> Automated content deployment</label>
-                <label class="check"><input type="checkbox" name="Services" value="Other"> Other / custom project</label>
-              </div>
-            </fieldset>
+            <label for="details">Tell us more about your project <span class="hint">(optional)</span></label>
+            <textarea id="details" name="Project Details" placeholder="Share anything that would help us understand your goals, current setup, or what you want to build."></textarea>
           </div>
 
-          <div class="field full">
-            <label for="goals">What are you trying to accomplish? *</label>
-            <textarea id="goals" name="Project Goals" placeholder="Tell us what success looks like for this project." required></textarea>
-          </div>
-
-          <div class="field">
-            <label for="timeline">Ideal timeline *</label>
-            <select id="timeline" name="Ideal Timeline" required>
-              <option value="">Select one</option>
-              <option>ASAP / urgent</option>
-              <option>2–4 weeks</option>
-              <option>1–2 months</option>
-              <option>3–6 months</option>
-              <option>Ongoing</option>
-              <option>Flexible / not sure</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="referral">How did you hear about us?</label>
-            <select id="referral" name="Referral Source">
-              <option value="">Select one</option>
-              <option>Referral</option>
-              <option>Google</option>
-              <option>Instagram / Facebook</option>
-              <option>LinkedIn</option>
-              <option>TikTok / YouTube</option>
-              <option>Networking / event</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="field full">
-            <label for="tools">Current tools / platforms</label>
-            <input id="tools" name="Current Tools and Platforms" type="text" placeholder="Examples: WordPress, Netlify, Sanity, Make.com, HubSpot, Google Ads">
-            <span class="hint">List anything we may need to integrate with or replace.</span>
-          </div>
-
-          <div class="field full">
-            <label for="details">Anything else we should know?</label>
-            <textarea id="details" name="Additional Details" placeholder="Existing challenges, must-have features, references, integrations, or other context."></textarea>
+          <div class="field full nonprofit-note">
+            Verified 501(c)(3) organizations may qualify for up to 15% off recurring service packages through our Nonprofit Partner Program.
           </div>
         </div>
 
