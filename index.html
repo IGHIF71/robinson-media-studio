@@ -431,6 +431,142 @@
       font-size: 1.35rem;
     }
 
+    /* Pricing */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      padding: 30px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(39,212,255,.42);
+      background:
+        linear-gradient(145deg, rgba(39,212,255,.08), rgba(124,92,255,.10)),
+        var(--card);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 55px rgba(39,212,255,.10);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(39,212,255,.12);
+      border: 1px solid rgba(39,212,255,.30);
+      color: #bfeeff;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .pricing-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 6px;
+    }
+
+    .price {
+      font-size: 2.35rem;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -.045em;
+      margin: 16px 0 8px;
+    }
+
+    .price small {
+      font-size: .85rem;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .setup-fee {
+      color: var(--accent-2);
+      font-weight: 700;
+      font-size: .9rem;
+      margin-bottom: 20px;
+    }
+
+    .pricing-card > p {
+      color: var(--muted);
+      font-size: .93rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: grid;
+      gap: 11px;
+      margin-bottom: 26px;
+      flex: 1;
+    }
+
+    .feature-list li {
+      color: #d9e0eb;
+      font-size: .9rem;
+      padding-left: 22px;
+      position: relative;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent-3);
+      font-weight: 900;
+    }
+
+    .pricing-note {
+      margin-top: 28px;
+      padding: 22px 24px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.035);
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .pricing-note strong {
+      color: white;
+    }
+
+    .setup-grid {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .setup-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 18px;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      background: rgba(255,255,255,.025);
+      font-size: .9rem;
+    }
+
+    .setup-item span:last-child {
+      color: var(--accent-2);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
     /* CTA */
     .cta {
       padding-top: 40px;
@@ -500,8 +636,13 @@
         height: 280px;
       }
 
-      .services-grid {
+      .services-grid,
+      .pricing-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pricing-card.featured {
+        transform: none;
       }
     }
 
@@ -526,7 +667,9 @@
         font-size: clamp(3rem, 16vw, 4.7rem);
       }
 
-      .services-grid {
+      .services-grid,
+      .pricing-grid,
+      .setup-grid {
         grid-template-columns: 1fr;
       }
 
@@ -559,6 +702,7 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#automation">Automation</a>
+        <a href="#pricing">Pricing</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -721,22 +865,134 @@
           <h2>Turn repetitive tasks into workflows.</h2>
 
           <p class="section-copy">
-            Robinson Media Studio builds automation systems that connect content, files, APIs, AI tools, and publishing platforms. Our content publishing workflow can prepare podcast promotional media by combining audio, artwork, episode information, captions, and hashtags into short-form content for publishing by the authorized account owner.
+            Robinson Media Studio builds custom AI agents and automation systems that connect content, files, APIs, business tools, and publishing platforms. Using Make.com, Sanity.io, AI services, and supported third-party integrations, we can create content deployment workflows that move content from creation and review through CMS publishing, social distribution, and reporting.
           </p>
 
           <div class="workflow" aria-label="Example automated content workflow">
             <div class="workflow-node">Audio + Assets</div>
             <div class="workflow-arrow">→</div>
-            <div class="workflow-node">AI Processing</div>
+            <div class="workflow-node">AI Agent</div>
             <div class="workflow-arrow">→</div>
-            <div class="workflow-node">Create Content</div>
+            <div class="workflow-node">Make.com</div>
             <div class="workflow-arrow">→</div>
             <div class="workflow-node">Review</div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-node">Sanity.io CMS</div>
             <div class="workflow-arrow">→</div>
             <div class="workflow-node">Publish</div>
           </div>
 
         </div>
+      </div>
+    </section>
+
+
+
+    <section id="pricing">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Pricing</div>
+          <h2>Choose the level of support your business needs.</h2>
+          <p>
+            Our monthly plans are designed for ongoing partnerships. One-time initialization fees cover the upfront work required to configure, build, migrate, connect, or launch your systems.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <article class="pricing-card">
+            <h3>Essentials</h3>
+            <div class="price">$1,500 <small>/ month</small></div>
+            <div class="setup-fee">Initialization: $750–$2,000</div>
+            <p>For businesses that need reliable website, content, search, and technical support.</p>
+            <ul class="feature-list">
+              <li>Up to 4 hours of website updates & maintenance</li>
+              <li>Up to 4 custom graphics or promotional assets monthly</li>
+              <li>Content/caption assistance for up to 4 posts monthly</li>
+              <li>Traditional SEO fundamentals</li>
+              <li>Basic AI Search Optimization</li>
+              <li>FAQ & structured-content optimization</li>
+              <li>Google Business Profile support</li>
+              <li>Monthly analytics summary</li>
+              <li>Hosting, SSL, DNS & domain support</li>
+              <li>30-minute monthly strategy call</li>
+            </ul>
+            <a class="button button-secondary" href="#contact">Choose Essentials</a>
+          </article>
+
+          <article class="pricing-card featured">
+            <div class="popular-badge">Most Popular</div>
+            <h3>Growth</h3>
+            <div class="price">$2,500 <small>/ month</small></div>
+            <div class="setup-fee">Initialization: $1,500–$3,000</div>
+            <p>For businesses ready to create more content, run campaigns, and improve lead generation.</p>
+            <ul class="feature-list">
+              <li>Everything in Essentials</li>
+              <li>Up to 8 custom graphics/content assets monthly</li>
+              <li>Advanced SEO + AI Search Optimization</li>
+              <li>Landing page creation & optimization</li>
+              <li>Google Ads campaign setup & management</li>
+              <li>Conversion tracking</li>
+              <li>Campaign optimization</li>
+              <li>Email & lead-capture optimization</li>
+              <li>Limited Make.com / workflow automation</li>
+              <li>Detailed monthly reporting</li>
+              <li>60-minute monthly strategy call</li>
+            </ul>
+            <a class="button button-primary" href="#contact">Choose Growth</a>
+          </article>
+
+          <article class="pricing-card">
+            <h3>Automation+</h3>
+            <div class="price">$3,500+ <small>/ month</small></div>
+            <div class="setup-fee">Initialization: $2,500–$7,500+</div>
+            <p>For organizations that want AI agents, connected systems, and scalable automation.</p>
+            <ul class="feature-list">
+              <li>Everything in Growth</li>
+              <li>Custom AI agent development & integration</li>
+              <li>Make.com business automation workflows</li>
+              <li>Automated content deployment workflows</li>
+              <li>AI → CMS → website publishing workflows</li>
+              <li>Sanity.io CMS integration & setup</li>
+              <li>CRM integrations</li>
+              <li>API & webhook integrations</li>
+              <li>Automated reporting & dashboards</li>
+              <li>Workflow monitoring & optimization</li>
+              <li>Priority technical support</li>
+            </ul>
+            <a class="button button-secondary" href="#contact">Build an Automation Plan</a>
+          </article>
+
+        </div>
+
+        <div class="pricing-note">
+          <strong>Nonprofit Partner Program:</strong> Verified 501(c)(3) nonprofit organizations may qualify for up to <strong>15% off recurring service packages</strong>. Discounted engagements may be limited based on availability. Advertising spend, hosting, domains, paid software, API usage, platform subscriptions, and other third-party costs are billed separately unless specifically included in a proposal.
+        </div>
+
+        <div class="section-heading" style="margin-top:60px; margin-bottom:26px;">
+          <div class="kicker">One-time services</div>
+          <h2 style="font-size:clamp(1.8rem,3vw,2.7rem);">Common initialization fees.</h2>
+          <p>Exact setup pricing depends on complexity, migration requirements, integrations, and the condition of existing systems.</p>
+        </div>
+
+        <div class="setup-grid">
+          <div class="setup-item"><span>Client onboarding & discovery</span><span>$250–$500+</span></div>
+          <div class="setup-item"><span>Website setup / migration</span><span>$500–$1,000+</span></div>
+          <div class="setup-item"><span>New small-business website</span><span>$1,500+</span></div>
+          <div class="setup-item"><span>Landing page build</span><span>$500+</span></div>
+          <div class="setup-item"><span>SEO + AI Search setup</span><span>$300–$750+</span></div>
+          <div class="setup-item"><span>Google Ads setup</span><span>$500–$750+</span></div>
+          <div class="setup-item"><span>Conversion tracking setup</span><span>$250+</span></div>
+          <div class="setup-item"><span>Basic automation setup</span><span>$500+</span></div>
+          <div class="setup-item"><span>Advanced automation workflow</span><span>$1,500+</span></div>
+          <div class="setup-item"><span>Custom AI agent / assistant setup</span><span>$1,500+</span></div>
+          <div class="setup-item"><span>Sanity.io CMS integration</span><span>$750–$2,500+</span></div>
+          <div class="setup-item"><span>CRM integration</span><span>$1,000+</span></div>
+          <div class="setup-item"><span>API / custom integration</span><span>Custom quote</span></div>
+          <div class="setup-item"><span>Google Analytics / Search Console setup</span><span>$200+</span></div>
+        </div>
+
       </div>
     </section>
 
@@ -823,6 +1079,7 @@
       <div class="footer-links">
         <a href="#services">Services</a>
         <a href="#automation">Automation</a>
+        <a href="#pricing">Pricing</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
       </div>
