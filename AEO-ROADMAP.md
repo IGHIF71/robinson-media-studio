@@ -18,7 +18,7 @@ This is a working checklist. Check off items as completed. Search indexing and A
 - [x] **Structured data:** Validate homepage Organization JSON-LD and Service JSON-LD on all four service pages at https://validator.schema.org/ . Confirm live URLs and fields match visible content. Optionally test Google-supported rich results at https://search.google.com/test/rich-results (Service markup does not necessarily qualify for a rich result).
 
 ## Week 2 — Answer-focused content
-- [ ] **About page:** Describe Robinson Media Studio, service areas, expertise, real team/background, and how projects are delivered. Avoid unverifiable credentials.
+- [x] **About page:** Describe Robinson Media Studio, service areas, expertise, real team/background, and how projects are delivered. Avoid unverifiable credentials.
 - [ ] **Expand FAQs:** Add 5–8 useful questions with concise direct answers to each of the four service pages (pricing factors, capabilities, integrations, implementation, support).
 - [ ] **Publish first article:** "How AI Automation Helps Small Businesses Save Time"; use demonstrable examples and internal links.
 - [ ] **Internal links:** Link About, articles, service pages, portfolio, and project inquiry form. Add new public pages to the sitemap.
