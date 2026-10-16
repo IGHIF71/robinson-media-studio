@@ -6,6 +6,11 @@
 
 This is a working checklist. Check off items as completed. Search indexing and AI citations are not guaranteed.
 
+## Progress update — October 16, 2026
+- [x] Submitted website sitemap in Google Search Console and Bing Webmaster Tools.
+- [x] Submitted important website URLs for indexing (user confirmed).
+- [ ] Confirm actual indexed status in Google Search Console and Bing Webmaster Tools. Submission is not confirmation of indexing.
+
 ## Week 1 — Technical discovery and indexing
 - [ ] **Google indexing:** In [Google Search Console](https://search.google.com/search-console), use URL Inspection for the homepage and four service pages. Check live availability and request indexing if needed.
 - [x] **Bing Webmaster Tools:** Import the verified Search Console property at https://www.bing.com/webmasters/ and submit `https://robinsonmediastudio.com/sitemap.xml`.
