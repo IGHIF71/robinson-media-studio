@@ -8,9 +8,9 @@ This is a working checklist. Check off items as completed. Search indexing and A
 
 ## Week 1 — Technical discovery and indexing
 - [ ] **Google indexing:** In [Google Search Console](https://search.google.com/search-console), use URL Inspection for the homepage and four service pages. Check live availability and request indexing if needed.
-- [ ] **Bing Webmaster Tools:** Import the verified Search Console property at https://www.bing.com/webmasters/ and submit `https://robinsonmediastudio.com/sitemap.xml`.
+- [x] **Bing Webmaster Tools:** Import the verified Search Console property at https://www.bing.com/webmasters/ and submit `https://robinsonmediastudio.com/sitemap.xml`.
 - [ ] **AI crawl access:** Check `https://robinsonmediastudio.com/robots.txt`; verify the public site returns HTTP 200 and has no unintended `noindex` rules. Allow `OAI-SearchBot` if you want ChatGPT Search discovery.
-- [ ] **Structured data:** Validate homepage Organization JSON-LD and Service JSON-LD on all four service pages at https://validator.schema.org/ . Confirm live URLs and fields match visible content. Optionally test Google-supported rich results at https://search.google.com/test/rich-results (Service markup does not necessarily qualify for a rich result).
+- [x] **Structured data:** Validate homepage Organization JSON-LD and Service JSON-LD on all four service pages at https://validator.schema.org/ . Confirm live URLs and fields match visible content. Optionally test Google-supported rich results at https://search.google.com/test/rich-results (Service markup does not necessarily qualify for a rich result).
 
 ## Week 2 — Answer-focused content
 - [ ] **About page:** Describe Robinson Media Studio, service areas, expertise, real team/background, and how projects are delivered. Avoid unverifiable credentials.
