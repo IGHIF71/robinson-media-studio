@@ -19,7 +19,7 @@ This is a working checklist. Check off items as completed. Search indexing and A
 
 ## Week 2 — Answer-focused content
 - [x] **About page:** Describe Robinson Media Studio, service areas, expertise, real team/background, and how projects are delivered. Avoid unverifiable credentials.
-- [ ] **Expand FAQs:** Add 5–8 useful questions with concise direct answers to each of the four service pages (pricing factors, capabilities, integrations, implementation, support).
+- [x] **Expand FAQs:** Add 5–8 useful questions with concise direct answers to each of the four service pages (pricing factors, capabilities, integrations, implementation, support).
 - [ ] **Publish first article:** "How AI Automation Helps Small Businesses Save Time"; use demonstrable examples and internal links.
 - [ ] **Internal links:** Link About, articles, service pages, portfolio, and project inquiry form. Add new public pages to the sitemap.
 
